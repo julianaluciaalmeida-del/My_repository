@@ -1,0 +1,20 @@
+import random
+
+caracteres = "+-/*!&$#?=@abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+
+longitud = int(input("Introduce la longitud de la contraseña: "))
+
+contraseña = ""
+
+for i in range(longitud):
+    contraseña += random.choice(caracteres)
+
+print("Tu contraseña es:", contraseña)
+
+if longitud < 8:
+    print("La contraseña es insegura.")
+elif longitud < 12:
+    print("La contraseña es medianamente segura.")
+else:
+    print("La contraseña es segura.")
+
